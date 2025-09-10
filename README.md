@@ -37,8 +37,7 @@ The script continuously logs CPU, memory, disk, and network usage every 5 minute
 4. Verify the process is running
    ps aux | grep sysmon.sh
 
-5. **Check the log file**
-
+5. Check the log file
    tail -f ~/sysmon.log
 
 
