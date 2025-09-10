@@ -1,2 +1,43 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/NENsd3bP)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=20400008&assignment_repo_type=AssignmentRepo)
+# System Monitoring Script (sysmon.sh)
+
+This is my **Intro to Linux GitHub Classroom assignment**.  
+The script continuously logs CPU, memory, disk, and network usage every 5 minutes.
+
+---
+
+## 📌 Features
+- Logs **CPU usage** (`mpstat` or `top` fallback)
+- Logs **memory usage** (`free -h`)
+- Logs **disk usage** for the root partition (`df -h /`)
+- Logs **network statistics** for the active network interface (`ip -s link`)
+- Appends all data to a log file (`sysmon.log`)
+
+---
+
+## 📂 Files in this repo
+- `sysmon.sh` → The monitoring script  
+- `sysmon.log` → log output from running the script  
+- `screenshot.png` → Proof of the script running in the background  
+
+---
+
+## ⚙️ How to Run
+
+1. **Clone the repo**
+   ```bash
+   git clone https://
+   cd into your repo
+
+2. Make the script executable 
+   chmod +x sysmon.sh
+
+3. Run the script in the background
+   nohup ./sysmon.sh >/dev/null 2>&1 &
+
+4. Verify the process is running
+   ps aux | grep sysmon.sh
+
+5. Check the log file
+   tail -f ~/sysmon.log
+
+
