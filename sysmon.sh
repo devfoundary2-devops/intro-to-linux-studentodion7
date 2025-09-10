@@ -24,7 +24,7 @@
 		     ip -s link show eth0 | grep -A 3 eth0 >> /var/log/sysmon.log
 
                        echo "" >> /var/log/sysmon.log
-		       Run every 5 minutes
+		      # Run every 5 minutes
                                  sleep 300   
 			 done
 
